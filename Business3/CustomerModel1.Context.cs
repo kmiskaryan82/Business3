@@ -26,5 +26,6 @@ namespace Business3
         }
     
         public virtual DbSet<Customer_Tb> Customer_Tb { get; set; }
+        public virtual DbSet<Vehicle_Tb> Vehicle_Tb { get; set; }
     }
 }

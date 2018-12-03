@@ -32,5 +32,16 @@ namespace Business3
 			}
 			ucCustomers.Instance.BringToFront();
 		}
+
+		private void aceVehicles_Click(object sender, EventArgs e)
+		{
+			if (!container.Controls.Contains(ucVehicles.Instance))
+			{
+				container.Controls.Add(ucVehicles.Instance);
+				ucVehicles.Instance.Dock = DockStyle.Fill;
+				ucVehicles.Instance.BringToFront();
+			}
+			ucVehicles.Instance.BringToFront();
+		}
 	}
 }

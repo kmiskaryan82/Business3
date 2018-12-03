@@ -8,6 +8,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.Data.SqlClient;
+using System.Configuration;
+using Business3.DataModel;
 
 namespace Business3
 {
@@ -30,9 +33,35 @@ namespace Business3
 
 		private void ucCustomers_Load(object sender, EventArgs e)
 		{
-			Business1Entities db = new Business1Entities();
-			gridControl1.DataSource = db.Customer_Tb.ToList();
+			BusinessContetx db = new BusinessContetx();
+			gridControl1.DataSource = db.Customers.ToList();
 
+		}
+
+		private void SaveXML_button_Click(object sender, EventArgs e)
+		{
+			SaveToXml();
+		}
+
+		void SaveToXml()
+		{
+			string connString = ConfigurationManager.ConnectionStrings["Business1Entities"].ConnectionString;
+			SqlConnection con = new SqlConnection(connString);
+
+			string ReadQuery = "SELECT * FROM [Business1].[dbo].[Customer_Tb]";
+			con.Open();
+			SqlCommand cmd = new SqlCommand(ReadQuery, con);
+			SqlDataAdapter adp = new SqlDataAdapter(cmd);
+			DataSet ds = new DataSet();
+			adp.Fill(ds);
+			con.Close();
+			string textXML = ds.GetXmlSchema();
+			using (System.IO.StreamWriter file =
+			new System.IO.StreamWriter(@"C:\Users\Karen\source\repos\Business3\Business3\Customers.xml"))
+			{
+				file.Write(textXML);
+			}
+			MessageBox.Show("Successfully Exported");
 		}
 	}
 }

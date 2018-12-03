@@ -31,7 +31,7 @@
 			this.container = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
 			this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
 			this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-			this.aceProducts = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.aceVehicles = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.aceCustomers = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.aceAddCustomer = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.aceAddProduct = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -67,7 +67,7 @@
 			// accordionControlElement1
 			// 
 			this.accordionControlElement1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.aceProducts,
+            this.aceVehicles,
             this.aceCustomers,
             this.aceAddCustomer,
             this.aceAddProduct});
@@ -76,11 +76,12 @@
 			this.accordionControlElement1.Text = "Main";
 			this.accordionControlElement1.Click += new System.EventHandler(this.accordionControlElement1_Click);
 			// 
-			// aceProducts
+			// aceVehicles
 			// 
-			this.aceProducts.Name = "aceProducts";
-			this.aceProducts.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-			this.aceProducts.Text = "Products";
+			this.aceVehicles.Name = "aceVehicles";
+			this.aceVehicles.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+			this.aceVehicles.Text = "Vehicles";
+			this.aceVehicles.Click += new System.EventHandler(this.aceVehicles_Click);
 			// 
 			// aceCustomers
 			// 
@@ -138,7 +139,7 @@
 		private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
 		private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
 		private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl fluentDesignFormControl1;
-		private DevExpress.XtraBars.Navigation.AccordionControlElement aceProducts;
+		private DevExpress.XtraBars.Navigation.AccordionControlElement aceVehicles;
 		private DevExpress.XtraBars.Navigation.AccordionControlElement aceCustomers;
 		private DevExpress.XtraBars.Navigation.AccordionControlElement aceAddCustomer;
 		private DevExpress.XtraBars.Navigation.AccordionControlElement aceAddProduct;

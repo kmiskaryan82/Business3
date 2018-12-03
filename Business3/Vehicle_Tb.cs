@@ -12,14 +12,14 @@ namespace Business3
     using System;
     using System.Collections.Generic;
     
-    public partial class Customer_Tb
+    public partial class Vehicle_Tb
     {
-        public int CustomerID { get; set; }
-        public string FirstName { get; set; }
-        public string Lastname { get; set; }
-        public string Phone { get; set; }
-        public string City { get; set; }
-        public Nullable<System.DateTime> DoB { get; set; }
-        public string Vehicle { get; set; }
+        public int VehicleID { get; set; }
+        public string Model { get; set; }
+        public string Engine { get; set; }
+        public int H_P { get; set; }
+        public string Color { get; set; }
+        public int Price { get; set; }
+        public string Customer { get; set; }
     }
 }

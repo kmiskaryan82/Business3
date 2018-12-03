@@ -51,6 +51,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -82,12 +83,40 @@
     <Compile Include="Customer_Tb.cs">
       <DependentUpon>CustomerModel1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DataModel\BusinessContetx.cs" />
+    <Compile Include="DataModel\Customer.cs" />
+    <Compile Include="DataModel\Vehicle.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812022149176_InitialCreate.cs" />
+    <Compile Include="Migrations\201812022149176_InitialCreate.Designer.cs">
+      <DependentUpon>201812022149176_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812022156435_Email.cs" />
+    <Compile Include="Migrations\201812022156435_Email.Designer.cs">
+      <DependentUpon>201812022156435_Email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812022218545_fgf.cs" />
+    <Compile Include="Migrations\201812022218545_fgf.Designer.cs">
+      <DependentUpon>201812022218545_fgf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812022337211_ch3.cs" />
+    <Compile Include="Migrations\201812022337211_ch3.Designer.cs">
+      <DependentUpon>201812022337211_ch3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812022342081_kjk.cs" />
+    <Compile Include="Migrations\201812022342081_kjk.Designer.cs">
+      <DependentUpon>201812022342081_kjk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812022359253_kkk.cs" />
+    <Compile Include="Migrations\201812022359253_kkk.Designer.cs">
+      <DependentUpon>201812022359253_kkk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ucCustomers.cs">
@@ -96,8 +125,35 @@
     <Compile Include="ucCustomers.Designer.cs">
       <DependentUpon>ucCustomers.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucVehicles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucVehicles.Designer.cs">
+      <DependentUpon>ucVehicles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle_Tb.cs">
+      <DependentUpon>CustomerModel1.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812022149176_InitialCreate.resx">
+      <DependentUpon>201812022149176_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812022156435_Email.resx">
+      <DependentUpon>201812022156435_Email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812022218545_fgf.resx">
+      <DependentUpon>201812022218545_fgf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812022337211_ch3.resx">
+      <DependentUpon>201812022337211_ch3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812022342081_kjk.resx">
+      <DependentUpon>201812022342081_kjk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812022359253_kkk.resx">
+      <DependentUpon>201812022359253_kkk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -111,6 +167,9 @@
     </Compile>
     <EmbeddedResource Include="ucCustomers.resx">
       <DependentUpon>ucCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucVehicles.resx">
+      <DependentUpon>ucVehicles.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config">
       <SubType>Designer</SubType>
@@ -144,6 +203,7 @@
       <DependentUpon>CustomerModel1.edmx</DependentUpon>
       <LastGenOutput>CustomerModel1.cs</LastGenOutput>
     </Content>
+    <Content Include="Customers.xml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
