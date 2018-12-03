@@ -14,13 +14,7 @@ namespace Business3
 		[STAThread]
 		static void Main()
 		{
-			//using (BusinessContetx context = new BusinessContetx())
-			//{
-			//	Vehicle vehicle = new Vehicle();
-			//	context.Vehicles.Add(vehicle);
-			//	context.SaveChanges();
-			//}
-
+			
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 
