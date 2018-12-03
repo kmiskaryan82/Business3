@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraBars;
+﻿using Business3.UserControlls;
+using DevExpress.XtraBars;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,6 +43,26 @@ namespace Business3
 				ucVehicles.Instance.BringToFront();
 			}
 			ucVehicles.Instance.BringToFront();
+		}
+
+		private void aceAddCustomer_Click(object sender, EventArgs e)
+		{
+			if (!container.Controls.Contains(ucAddCustomer.Instance))
+			{
+				container.Controls.Add(ucAddCustomer.Instance);
+				ucAddCustomer.Instance.Dock = DockStyle.Fill;
+				ucAddCustomer.Instance.BringToFront();
+			}
+		}
+
+		private void aceAddProduct_Click(object sender, EventArgs e)
+		{
+			if (!container.Controls.Contains(ucAddVehicle.Instance))
+			{
+				container.Controls.Add(ucAddVehicle.Instance);
+				ucAddVehicle.Instance.Dock = DockStyle.Fill;
+				ucAddVehicle.Instance.BringToFront();
+			}
 		}
 	}
 }

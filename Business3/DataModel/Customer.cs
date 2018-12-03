@@ -15,10 +15,10 @@ namespace Business3.DataModel
 		public string FirstName { get; set; }
 		[MaxLength(50)]
 		public string LastName { get; set; }
-		
-		public string DoB { get; set; }
-
-		public string RegDate { get; set; }
+		[DataType(DataType.Date)]
+		public DateTime? DoB { get; set; }
+		[DataType(DataType.Date)]
+		public DateTime? RegDate { get; set; }
 		[Required]
 		public long Phone { get; set; }
 		[MaxLength(20)]

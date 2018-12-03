@@ -14,15 +14,12 @@ namespace Business3
 		[STAThread]
 		static void Main()
 		{
-			using (BusinessContetx context = new BusinessContetx())
-			{
-				Customer customer = new Customer();
-				Vehicle vehicle = new Vehicle();
-
-				context.Customers.Add(customer);
-				context.Vehicles.Add(vehicle);
-				context.SaveChanges();
-			}
+			//using (BusinessContetx context = new BusinessContetx())
+			//{
+			//	Vehicle vehicle = new Vehicle();
+			//	context.Vehicles.Add(vehicle);
+			//	context.SaveChanges();
+			//}
 
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);

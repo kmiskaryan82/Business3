@@ -43,6 +43,8 @@
     <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -116,19 +118,39 @@
     <Compile Include="Migrations\201812022359253_kkk.Designer.cs">
       <DependentUpon>201812022359253_kkk.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812031119115_556.cs" />
+    <Compile Include="Migrations\201812031119115_556.Designer.cs">
+      <DependentUpon>201812031119115_556.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812031122151_Ad-Migraion 681.cs" />
+    <Compile Include="Migrations\201812031122151_Ad-Migraion 681.Designer.cs">
+      <DependentUpon>201812031122151_Ad-Migraion 681.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ucCustomers.cs">
+    <Compile Include="UserControlls\ucAddCustomer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucCustomers.Designer.cs">
+    <Compile Include="UserControlls\ucAddCustomer.Designer.cs">
+      <DependentUpon>ucAddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlls\ucAddVehicle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlls\ucAddVehicle.Designer.cs">
+      <DependentUpon>ucAddVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlls\ucCustomers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlls\ucCustomers.Designer.cs">
       <DependentUpon>ucCustomers.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucVehicles.cs">
+    <Compile Include="UserControlls\ucVehicles.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucVehicles.Designer.cs">
+    <Compile Include="UserControlls\ucVehicles.Designer.cs">
       <DependentUpon>ucVehicles.cs</DependentUpon>
     </Compile>
     <Compile Include="Vehicle_Tb.cs">
@@ -155,6 +177,12 @@
     <EmbeddedResource Include="Migrations\201812022359253_kkk.resx">
       <DependentUpon>201812022359253_kkk.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812031119115_556.resx">
+      <DependentUpon>201812031119115_556.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812031122151_Ad-Migraion 681.resx">
+      <DependentUpon>201812031122151_Ad-Migraion 681.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -165,10 +193,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ucCustomers.resx">
+    <EmbeddedResource Include="UserControlls\ucAddCustomer.resx">
+      <DependentUpon>ucAddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlls\ucAddVehicle.resx">
+      <DependentUpon>ucAddVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlls\ucCustomers.resx">
       <DependentUpon>ucCustomers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucVehicles.resx">
+    <EmbeddedResource Include="UserControlls\ucVehicles.resx">
       <DependentUpon>ucVehicles.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config">

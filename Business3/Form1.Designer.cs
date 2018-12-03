@@ -95,12 +95,14 @@
 			this.aceAddCustomer.Name = "aceAddCustomer";
 			this.aceAddCustomer.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
 			this.aceAddCustomer.Text = "Add new customer";
+			this.aceAddCustomer.Click += new System.EventHandler(this.aceAddCustomer_Click);
 			// 
 			// aceAddProduct
 			// 
 			this.aceAddProduct.Name = "aceAddProduct";
 			this.aceAddProduct.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-			this.aceAddProduct.Text = "Add new product";
+			this.aceAddProduct.Text = "Add new vehicle";
+			this.aceAddProduct.Click += new System.EventHandler(this.aceAddProduct_Click);
 			// 
 			// fluentDesignFormControl1
 			// 
